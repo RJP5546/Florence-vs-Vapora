@@ -714,10 +714,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1407899611}
   - component: {fileID: 1407899610}
+  - component: {fileID: 1407899616}
+  - component: {fileID: 1407899613}
+  - component: {fileID: 1407899617}
   - component: {fileID: 1407899615}
   - component: {fileID: 1407899614}
-  - component: {fileID: 1407899613}
-  - component: {fileID: 1407899616}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -847,35 +848,11 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1407899615}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 95bf2956-580b-40cc-907f-8eeda18aac89
     m_ActionName: Player Controls/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1407899615}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ee71263a-5f67-4501-88e6-55cf530b0b1d
     m_ActionName: Player Controls/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
@@ -900,9 +877,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  horizontal: 0
+  horizontalInputDirection: 0
   speed: 5
-  jumpimngPower: 16
+  jumpingPower: 16
   isFacingRight: 1
 --- !u!61 &1407899616
 BoxCollider2D:
@@ -949,6 +926,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1407899617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407899609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f212d345e85d047b549f17a212a281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  health: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
