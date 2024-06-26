@@ -15,12 +15,28 @@ public class PlayerItemCollect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        /*
         if (collision.CompareTag("health_potion"))
         {
             inventory.healthPotion.value += 1;
             Debug.Log("HealthPotions: " + inventory.healthPotion.value);
 
             Destroy(collision.gameObject);
+        }
+        */
+        string tagName = collision.tag;
+        switch (tagName)
+        {
+            case "health_potion":
+                inventory.healthPotion.value += 1;
+                Debug.Log("HealthPotions: " + inventory.healthPotion.value);
+
+                Destroy(collision.gameObject);
+                break;
+
+            default:
+                break;
+
         }
     }
 }
