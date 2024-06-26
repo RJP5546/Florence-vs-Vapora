@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerItemCollect : MonoBehaviour
@@ -42,7 +44,10 @@ public class PlayerItemCollect : MonoBehaviour
 
             case "interactable_object":
                 Debug.Log("Enter Interact Range");
+                //sets the current interactable object with the obect the player last collided with
                 interactableObject = collision.gameObject;
+                //toggle interact text on
+                interactableObject.GetComponentInChildren<TextMeshPro>(true).gameObject.SetActive(true);
                 break;
 
             default:
@@ -60,6 +65,8 @@ public class PlayerItemCollect : MonoBehaviour
 
             case "interactable_object":
                 Debug.Log("Leave Interact Range");
+                //toggle interact text off
+                interactableObject.GetComponentInChildren<TextMeshPro>(true).gameObject.SetActive(false);
                 //remove the ability to interact with the object after the player leaves the range of interaction
                 interactableObject = null;
                 break;
@@ -73,7 +80,10 @@ public class PlayerItemCollect : MonoBehaviour
     {
         if (interactableObject != null)
         {
+            interactableObject.GetComponentInChildren<TextMeshPro>(true).gameObject.SetActive(false);
             Debug.Log("Interacted");
+            //run the interaction unity event
+            interactableObject.GetComponent<ItemInteraction>().InvokeEvent();
         }
         
     }
