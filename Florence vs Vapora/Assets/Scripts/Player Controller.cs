@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     //refrence to the action map we are implementing
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private PlayerItemCollect itemInteractor;
     [SerializeField] private LayerMask groundLayer;
 
     [SerializeField] private float horizontalInputDirection;
@@ -80,7 +81,11 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
 
     }
 
-
-
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        //call the interact with item method on the itemInteractor
+        if (context.performed) { itemInteractor.InteractWithItem(); }
+        
+    }
 }
 
