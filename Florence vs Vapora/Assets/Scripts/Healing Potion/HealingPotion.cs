@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /*
  *  Healing Potion script to heal the animals 
  */
 
 public class HealingPotion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private InventoryIntVariableSO healingPotions;
 
-    // Update is called once per frame
-    void Update()
+    public void HealAnimal(Animal animal)
     {
-        
+        if (healingPotions.value > 0)
+        {
+            animal.Heal();
+        }
+        else
+        {
+            Debug.Log("Healing Potion Count is 0");
+        }
     }
 }
