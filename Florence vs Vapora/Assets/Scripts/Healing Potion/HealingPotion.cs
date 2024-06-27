@@ -15,6 +15,7 @@ public class HealingPotion : MonoBehaviour
         if (healingPotions.value > 0)
         {
             animal.Heal();
+            Debug.Log("healed");
         }
         else
         {

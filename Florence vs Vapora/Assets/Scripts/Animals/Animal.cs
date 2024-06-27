@@ -9,8 +9,14 @@ public class Animal : MonoBehaviour
     protected bool isHealed = false;
     private SpriteRenderer spriteRenderer;
 
+    protected GameObject player;
+    protected HealingPotion potion;
+
     public void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        potion = player.GetComponent<HealingPotion>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color = Color.blue;
     }
