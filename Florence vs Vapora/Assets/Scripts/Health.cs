@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
     {
         health += heal;
         //If the health is greater than the max health, set current health to max health
-        if(health < maxHealth)
+        if(health > maxHealth)
         {
             health = maxHealth;
         }
