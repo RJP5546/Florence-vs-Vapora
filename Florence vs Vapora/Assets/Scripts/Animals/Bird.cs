@@ -8,7 +8,6 @@ public class Bird : Animal
     public float flySpeed = 5f;
 
     [SerializeField] private Transform playerSeatPos;
-    private float gScale;
 
     public void RunInteraction()
     {

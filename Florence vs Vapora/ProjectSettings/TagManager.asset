@@ -6,6 +6,7 @@ TagManager:
   tags:
   - health_potion
   - interactable_object
+  - breakable_wall
   layers:
   - Default
   - TransparentFX
