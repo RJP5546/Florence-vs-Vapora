@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bird : Animal
 {
-    public Transform position;
+    public Transform[] FlightPath;
     public float flySpeed = 5f;
 
     [SerializeField] private Transform playerSeatPos;
@@ -30,11 +30,18 @@ public class Bird : Animal
 
         yield return new WaitForSecondsRealtime(.5f);
 
-        while (Vector2.Distance(transform.position, position.position) > .1f)
+        for (int positionIndex = 0; positionIndex < FlightPath.Length; positionIndex++)
         {
-            transform.position = Vector2.Lerp(transform.position, position.position, flySpeed * Time.deltaTime);
-            yield return null;
+            Debug.Log("index val: " + positionIndex);
+            while (Vector2.Distance(transform.position, FlightPath[positionIndex].position) > .5f)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, FlightPath[positionIndex].position, flySpeed * Time.deltaTime);
+                yield return null;
+            }
         }
+        
+
+
         Debug.Log("flight finished");
 
         LockPlayerOff();
