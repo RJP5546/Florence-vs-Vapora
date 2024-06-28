@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     [SerializeField] private float jumpingPower = 16f;
     [SerializeField] private bool isFacingRight = true;
 
+    [SerializeField] private GameObject playerSpawnLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,17 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     {
         //update the players velocity
         rb.velocity = new Vector2(horizontalInputDirection * speed, rb.velocity.y);
+    }
+
+    public void UpdatePlayerSpawnLocation(GameObject newSpawnLocation)
+    {
+        //when entering a new scene, this will update the players spawnpoint
+        playerSpawnLocation = newSpawnLocation;
+    }
+
+    public void Respawn()
+    {
+        this.transform.position = playerSpawnLocation.transform.position;
     }
 
     private bool IsGrounded()

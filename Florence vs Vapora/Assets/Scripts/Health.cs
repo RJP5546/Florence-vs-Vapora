@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     
     [SerializeField] private int maxHealth;
     [SerializeField] private int health;
-    public HealthBar healthBar;
+    [SerializeField] private HealthBar healthBar;
+
+    [SerializeField] private UnityEvent Die;
 
     void Start()
     {
@@ -31,8 +34,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        //If the health is less than 0, die
-        if (health <= 0) { Die(); }
+        //If the health is less than 1, die
+        if (health <= 1) { Die.Invoke(); }
         //Set current health after taking damage
         health -= damage;
         healthBar.setHealth(health);
@@ -48,9 +51,12 @@ public class Health : MonoBehaviour
         }
         healthBar.setHealth(health);
     }
-
-    public void Die()
+    
+    //used for when the player dies, reset health to max
+    public void ResetHealth()
     {
-
+        health = maxHealth;
+        healthBar.setHealth(health);
     }
+
 }
