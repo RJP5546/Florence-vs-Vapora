@@ -7,8 +7,12 @@ public class Acid : MonoBehaviour
     public HealthBar healthBar;
     public Health health;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        health.TakeDamage(1);
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log("On trigger stay");
+            health.TakeDamage(1);
+        }
     }
 }
