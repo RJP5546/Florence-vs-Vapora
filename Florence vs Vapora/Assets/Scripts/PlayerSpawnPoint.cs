@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerSpawnPoint : MonoBehaviour
 {
+    private GameObject player;
     void Start()
     {
         //at the start of the scene, it finds the player and sets its spawn to this spawn point
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().UpdatePlayerSpawnLocation(this.gameObject);
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerController>().UpdatePlayerSpawnLocation(this.gameObject);
+        player.transform.position = this.transform.position;
     }
 
 }
