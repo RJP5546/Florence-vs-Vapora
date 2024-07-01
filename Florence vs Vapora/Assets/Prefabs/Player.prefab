@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 5497362441652834496}
   - component: {fileID: 3760900468990260493}
   - component: {fileID: 8169816286772680412}
-  - component: {fileID: 3062248178253359585}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -164,7 +163,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &1225002619293266737
@@ -181,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   health: 0
+  invulnerabilityTime: 1
   healthBar: {fileID: 0}
   Die:
     m_PersistentCalls:
@@ -288,18 +288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healingPotions: {fileID: 11400000, guid: 5f9c04f122f5ddd419e3e6c212fcb337, type: 2}
---- !u!114 &3062248178253359585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857475472769616850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a5f266c0757b6418884ab6733d1495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2872630919523331848
 GameObject:
   m_ObjectHideFlags: 0

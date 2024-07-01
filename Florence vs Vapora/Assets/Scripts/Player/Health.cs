@@ -8,9 +8,12 @@ public class Health : MonoBehaviour
     
     [SerializeField] private int maxHealth;
     [SerializeField] private int health;
+    [SerializeField] private float invulnerabilityTime;
     [SerializeField] private HealthBar healthBar;
 
     [SerializeField] private UnityEvent Die;
+
+    private bool isInvulnerable;
 
     void Start()
     {
@@ -34,11 +37,16 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        //If the health is less than 1, die
-        if (health <= 1) { Die.Invoke(); }
-        //Set current health after taking damage
-        health -= damage;
-        healthBar.setHealth(health);
+        if (!isInvulnerable)
+        {
+            //If the health is less than 1, die
+            if (health <= 1) { Die.Invoke(); }
+            //Set current health after taking damage
+            health -= damage;
+            healthBar.setHealth(health);
+            StartCoroutine(InvulnerableTime());
+        }
+        
     }
 
     public void Heal(int heal)
@@ -57,6 +65,13 @@ public class Health : MonoBehaviour
     {
         health = maxHealth;
         healthBar.setHealth(health);
+    }
+
+    IEnumerator InvulnerableTime()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerabilityTime);
+        isInvulnerable = false;
     }
 
 }

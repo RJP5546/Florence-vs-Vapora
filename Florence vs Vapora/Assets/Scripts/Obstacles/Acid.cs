@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Acid : MonoBehaviour
 {
-    //public HealthBar healthBar;
-    public Health health;
+    private Health health;
 
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (col.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && health == null)
         {
-            Debug.Log("On trigger stay");
+            health = collision.GetComponent<Health>();
             health.TakeDamage(1);
         }
+        else if (collision.gameObject.tag == "Player" && health != null)
+        {
+            health.TakeDamage(1);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        health = null;
     }
 }

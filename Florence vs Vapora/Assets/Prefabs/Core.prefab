@@ -257,6 +257,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2883944276228933754, guid: 06f3291cabbbc744d9ac8dd501929d7d, type: 3}
   m_PrefabInstance: {fileID: 4143564216721093624}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3470048538340949672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 696073809765256528, guid: 06f3291cabbbc744d9ac8dd501929d7d, type: 3}
+  m_PrefabInstance: {fileID: 4143564216721093624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3c61ea8d8e0484aad6194e06d469cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6720897775954263844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,6 +312,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6538419852026352500}
+    - target: {fileID: 1225002619293266737, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
+      propertyPath: Die.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3470048538340949672}
     - target: {fileID: 3109336927887598570, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.56
