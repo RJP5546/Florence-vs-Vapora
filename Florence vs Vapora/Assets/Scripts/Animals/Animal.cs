@@ -18,12 +18,12 @@ public class Animal : MonoBehaviour
         potion = player.GetComponent<HealingPotion>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = Color.blue;
+        spriteRenderer.color = Color.green;
     }
 
     public void Heal()
     {
         isHealed = true;
-        spriteRenderer.color = Color.green;
+        spriteRenderer.color = Color.white;
     }
 }

@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     private bool IsGrounded()
     {
         //returns if the player is on the ground
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
     }
 
     private void Flip()

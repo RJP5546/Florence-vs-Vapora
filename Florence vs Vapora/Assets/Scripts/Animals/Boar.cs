@@ -10,7 +10,7 @@ public class Boar : Animal
     [SerializeField] private float maxSpeed = 7f;
     private bool hasHitWall = false;
 
-    public void Start()
+    public new void Start()
     {
         base.Start();
         //Disable boar box Collider

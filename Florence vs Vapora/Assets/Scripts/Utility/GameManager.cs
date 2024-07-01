@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Health playerHealth;
     [SerializeField] private PlayerController playerController;
 
-
     public void RunRespawn()
     {
         StartCoroutine(Respawn());
