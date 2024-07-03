@@ -20,7 +20,6 @@ public class Spikes : MonoBehaviour
     {
         startPos = transform.position;
         targetPos = new Vector2(startPos.x + (maxDist * moveDir.x), startPos.y + (maxDist * moveDir.y));
-        Debug.Log(targetPos);
     }
 
     // Update is called once per frame
@@ -29,9 +28,7 @@ public class Spikes : MonoBehaviour
         if (spikeAgain)
         {
             StartCoroutine(Activate());
-            Debug.Log("Activated");
-            Debug.Log(transform.position);
-            Debug.Log(new Vector2((maxDist * moveDir.x) + transform.position.x, transform.position.y));
+            Debug.Log("Activated Spikes");
         }
     }
 
