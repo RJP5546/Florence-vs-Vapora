@@ -280,10 +280,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1149228686476790910, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2399993
-      objectReference: {fileID: 0}
     - target: {fileID: 1225002619293266737, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
       propertyPath: healthBar
       value: 
@@ -332,18 +328,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7948086277758258156, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 7700755006953704169}
-    - target: {fileID: 7948086277758258156, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
-      propertyPath: stopLerpTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948086277758258156, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
-      propertyPath: walkLerpTime
-      value: 0.05
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -374,11 +358,6 @@ MonoBehaviour:
 --- !u!1 &6242887990754702582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 857475472769616850, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
-  m_PrefabInstance: {fileID: 6720897775954263844}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &7700755006953704169 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4007076720359126477, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
   m_PrefabInstance: {fileID: 6720897775954263844}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8530936573398211790 stripped

@@ -216,9 +216,14 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  animator: {fileID: 4007076720359126477}
+  animationPlayerSpeed: 0
   speed: 0
   targetSpeed: 0
+  targetLerpTime: 0
   walkSpeed: 7.5
+  walkLerpTime: 0.05
+  stopLerpTime: 0.5
   jumpingPower: 16
   isFacingRight: 1
   playerSpawnLocation: {fileID: 0}
