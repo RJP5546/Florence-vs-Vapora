@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Boar : Animal
 {
@@ -18,11 +19,20 @@ public class Boar : Animal
         boxCollider.enabled = false;
     }
 
+    private void PlayBoarSound()
+    {
+        FMOD.Studio.EventInstance boar = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Boar");
+        boar.start();
+        boar.release(); // Releasing the instance helps prevent memory leaks
+    }
+    //This is a method to directly call in an instance of a FMOD event to play quick SFX before removing it after being called. 
+
     public void RunInteraction()
     {
         if (isHealed)
         {
             StartCoroutine(Charge(chargeDirection));
+            PlayBoarSound();
         }
         else
         {
