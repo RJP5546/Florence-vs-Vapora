@@ -9,6 +9,7 @@ public class Spikes : MonoBehaviour
     [SerializeField] private float maxDist;
     [Tooltip("In Seconds")]
     [SerializeField] private float intervalTime;
+    [SerializeField] private float startTime = 0;
 
     [SerializeField] private int damageDealt;
 
@@ -22,6 +23,12 @@ public class Spikes : MonoBehaviour
     {
         startPos = transform.position;
         targetPos = new Vector2(startPos.x + (maxDist * moveDir.x), startPos.y + (maxDist * moveDir.y));
+
+        if (startTime != 0)
+        {
+            spikeAgain = false;
+            StartCoroutine(WaitToStart());
+        }
     }
 
     // Update is called once per frame
@@ -32,11 +39,14 @@ public class Spikes : MonoBehaviour
             StartCoroutine(Activate());
             Debug.Log("Activated Spikes");
         }
+
     }
 
     IEnumerator Activate()
     {
         spikeAgain = false;
+        Collider2D coll = GetComponent<Collider2D>();
+        coll.enabled = true;
         while (Vector2.Distance(transform.position, targetPos) > .2f)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
@@ -52,6 +62,13 @@ public class Spikes : MonoBehaviour
         }
 
         yield return new WaitForSecondsRealtime(intervalTime);
+        spikeAgain = true;
+        coll.enabled = true;
+    }
+
+    IEnumerator WaitToStart()
+    {
+        yield return new WaitForSecondsRealtime(startTime);
         spikeAgain = true;
     }
 
