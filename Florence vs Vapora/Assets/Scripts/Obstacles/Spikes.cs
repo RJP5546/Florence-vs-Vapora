@@ -10,6 +10,8 @@ public class Spikes : MonoBehaviour
     [Tooltip("In Seconds")]
     [SerializeField] private float intervalTime;
 
+    [SerializeField] private int damageDealt;
+
     private Vector2 startPos;
     private Vector2 targetPos;
 
@@ -53,5 +55,11 @@ public class Spikes : MonoBehaviour
         spikeAgain = true;
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Health>().TakeDamage(damageDealt);
+        }
+    }
 }
