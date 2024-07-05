@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,11 +12,23 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     [SerializeField] private Transform groundCheck;
     [SerializeField] private PlayerItemCollect itemInteractor;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Animator animator;
 
-    [SerializeField] private float horizontalInputDirection;
+
+    [SerializeField] private float animationPlayerSpeed;
     [SerializeField] private float speed;
+    [SerializeField] private float targetSpeed;
+    [SerializeField] private float targetLerpTime;
+
+    [SerializeField] private float walkSpeed;
+
+    [SerializeField] private float walkLerpTime;
+    [SerializeField] private float stopLerpTime;
+
     [SerializeField] private float jumpingPower = 16f;
     [SerializeField] private bool isFacingRight = true;
+
+    private float horizontalInputDirection;
 
     [SerializeField] private GameObject playerSpawnLocation;
 
@@ -30,8 +43,12 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
         actions.SetCallbacks(this);
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        //smooth the players movement
+        speed = Mathf.Lerp(speed, targetSpeed, targetLerpTime);
+        //update the animator speed
+        animator.SetFloat("AnimationPlayerSpeed", speed);
         //update the players velocity
         rb.velocity = new Vector2(horizontalInputDirection * speed, rb.velocity.y);
     }
@@ -79,18 +96,32 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        //set the horizontal input direction
-        horizontalInputDirection = context.ReadValue<Vector2>().x;
+        
+        if (context.performed) 
+        {
+            //set the horizontal input direction
+            horizontalInputDirection = context.ReadValue<Vector2>().x;
+            targetSpeed = walkSpeed;
+            targetLerpTime = walkLerpTime;
 
-        //flip the character if needed
-        if(!isFacingRight && horizontalInputDirection > 0f) 
-        {
-            Flip();
+            //flip the character if needed
+            if (!isFacingRight && horizontalInputDirection > 0f)
+            {
+                Flip();
+            }
+            else if (isFacingRight && horizontalInputDirection < 0f)
+            {
+                Flip();
+            }
         }
-        else if (isFacingRight && horizontalInputDirection < 0f)
+        
+        
+        if (context.canceled)
         {
-            Flip();
+            targetSpeed = 0;
+            targetLerpTime = stopLerpTime;
         }
+
 
     }
 
