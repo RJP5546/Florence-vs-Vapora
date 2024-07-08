@@ -48,6 +48,8 @@ public class Boar : Animal
 
     IEnumerator Charge(Vector2 cD)
     {
+        if (cD.x < 0) { this.spriteRenderer.flipX = true; }
+        else { this.spriteRenderer.flipX = false; }
         while (hasHitWall == false)
         {
             if (chargeSpeed < maxSpeed) chargeSpeed += speedIncreaseInterval;

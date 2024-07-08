@@ -345,7 +345,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -407,6 +407,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f149773044fca4ab056781b0f870da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlightPath:
-  - {fileID: 0}
-  flySpeed: 5
+  WalkPath: []
+  walkSpeed: 5

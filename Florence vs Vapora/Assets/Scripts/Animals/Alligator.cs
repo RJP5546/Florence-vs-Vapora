@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Elephant : Animal
+public class Alligator : Animal
 {
     public Transform[] WalkPath;
     public float walkSpeed = 5f;
