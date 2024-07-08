@@ -103,7 +103,7 @@ MonoBehaviour:
   maxDist: 3
   intervalTime: 5
   startTime: 0
-  damageDealt: 0
+  damageDealt: 1
 --- !u!60 &1207927183694428720
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -7,8 +7,8 @@ public class Animal : MonoBehaviour
 {
     // Boolean to check if an animal can be Healed
     protected bool isHealed = false;
-    private SpriteRenderer spriteRenderer;
-
+    protected SpriteRenderer spriteRenderer;
+    protected Animator AnimalAnimator;
     protected GameObject player;
     protected HealingPotion potion;
 
@@ -19,6 +19,8 @@ public class Animal : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color = Color.green;
+
+        AnimalAnimator = GetComponent<Animator>();
     }
 
     public void Heal()
