@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Alligator : Animal
 {
-    public Transform[] WalkPath;
-    public float walkSpeed = 5f;
+    [SerializeField] private Transform[] WalkPath;
+    [SerializeField] private float walkSpeed = 5f;
+
+    private bool ranInteractionEvent;
 
     public new void Start()
     {
@@ -19,6 +21,7 @@ public class Alligator : Animal
     {
         if (isHealed)
         {
+            if (ranInteractionEvent) { return; }
             StartCoroutine(Walk());
         }
         else
@@ -43,5 +46,6 @@ public class Alligator : Animal
 
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
         boxCollider.enabled = true;
+        ranInteractionEvent = true;
     }
 }

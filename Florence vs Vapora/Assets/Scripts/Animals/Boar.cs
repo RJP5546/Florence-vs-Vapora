@@ -10,6 +10,8 @@ public class Boar : Animal
     [SerializeField] private float maxSpeed = 7f;
     private bool hasHitWall = false;
 
+    private bool ranInteractionEvent;
+
     public new void Start()
     {
         base.Start();
@@ -22,6 +24,7 @@ public class Boar : Animal
     {
         if (isHealed)
         {
+            if (ranInteractionEvent) { return; }
             StartCoroutine(Charge(chargeDirection));
         }
         else
@@ -59,5 +62,6 @@ public class Boar : Animal
             transform.position = (Vector2)transform.position + cD * chargeSpeed * Time.deltaTime;
             yield return null;
         }
+        ranInteractionEvent = true;
     }
 }

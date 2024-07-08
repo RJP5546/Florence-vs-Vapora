@@ -14,9 +14,11 @@ public class GasLeak : MonoBehaviour
     IEnumerator InteractionCoroutine()
     {
         GetComponentInChildren<ParticleSystem>(true).loop = false;
+
         yield return new WaitForSecondsRealtime(5f);
-        levelExit.GetComponent<SpriteRenderer>().color = Color.green;
-        levelExit.canExit = true;
+
+        levelExit.CompleteObjective();
+
         Destroy(gameObject);
     }
 }
