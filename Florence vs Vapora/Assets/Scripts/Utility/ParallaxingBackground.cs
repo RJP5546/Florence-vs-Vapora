@@ -7,8 +7,6 @@ public class ParallaxingBackground : MonoBehaviour
 
     [SerializeField] private Camera mainCam;
     [SerializeField] private Transform followTarget;
-    [SerializeField] private Transform[] Backgrounds;
-    [SerializeField] private Vector2[] BackgroundStartingPositions;
 
     private Vector2 startingPos;
 
@@ -26,6 +24,8 @@ public class ParallaxingBackground : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCam = Camera.main;
+        followTarget = GameObject.FindGameObjectWithTag("Player").transform;
         startingPos = transform.position;
         startingZ = transform.position.z;
     }

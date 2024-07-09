@@ -3,9 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
-    [SerializeField] private int objectivesToComplete;
-    private int objectivesCompleted = 0;
+    [SerializeField] private GameManager gm;
     private bool canExit;
+
+    private void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -17,13 +21,12 @@ public class LevelExit : MonoBehaviour
 
     public void CompleteObjective()
     {
-        objectivesCompleted += 1;
-        if(objectivesCompleted >= objectivesToComplete) 
+        if (!canExit)
         {
             canExit = true;
             this.GetComponent<SpriteRenderer>().color = Color.green;
-        }
-
+            gm.GasLeaksPatched += 1;
+        }  
     }
 
 }

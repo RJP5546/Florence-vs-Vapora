@@ -99,8 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
   followTarget: {fileID: 0}
-  Backgrounds: []
-  BackgroundStartingPositions: []
 --- !u!1 &2744400658990266537
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,8 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
   followTarget: {fileID: 0}
-  Backgrounds: []
-  BackgroundStartingPositions: []
 --- !u!1 &3520890149394152940
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,8 +297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
   followTarget: {fileID: 0}
-  Backgrounds: []
-  BackgroundStartingPositions: []
 --- !u!1 &4517658874064001898
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,8 +396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
   followTarget: {fileID: 0}
-  Backgrounds: []
-  BackgroundStartingPositions: []
 --- !u!1 &7655644523475721961
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,8 +495,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
   followTarget: {fileID: 0}
-  Backgrounds: []
-  BackgroundStartingPositions: []
 --- !u!1 &8878269618605146577
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +520,7 @@ Transform:
   m_GameObject: {fileID: 8878269618605146577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17, y: 12.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6672689, y: 1.4419, z: 1.4419}
   m_ConstrainProportionsScale: 0
   m_Children:

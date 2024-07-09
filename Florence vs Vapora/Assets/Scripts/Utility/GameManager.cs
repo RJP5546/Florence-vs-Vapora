@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Health playerHealth;
     [SerializeField] private PlayerController playerController;
 
+    public int GasLeaksPatched = 0;
+
     public void RunRespawn()
     {
         StartCoroutine(Respawn());
