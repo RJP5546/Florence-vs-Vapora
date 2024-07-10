@@ -26,9 +26,11 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     [SerializeField] private float stopLerpTime;
 
     [SerializeField] private float jumpingPower = 16f;
-    [SerializeField] private bool isFacingRight = true;
+
+    [SerializeField] private SpriteRenderer playerSpriteRenderer;
 
     private float horizontalInputDirection;
+    
 
     [SerializeField] private GameObject playerSpawnLocation;
 
@@ -70,15 +72,6 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
         return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
     }
 
-    private void Flip()
-    {
-        //Flip the Player X scale
-        isFacingRight = !isFacingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
-    }
-
     public void OnJump(InputAction.CallbackContext context)
     {
         //jump if the player is on the ground
@@ -105,13 +98,13 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
             targetLerpTime = walkLerpTime;
 
             //flip the character if needed
-            if (!isFacingRight && horizontalInputDirection > 0f)
+            if (playerSpriteRenderer.flipX && horizontalInputDirection > 0f)
             {
-                Flip();
+                playerSpriteRenderer.flipX = false;
             }
-            else if (isFacingRight && horizontalInputDirection < 0f)
+            else if (!playerSpriteRenderer.flipX && horizontalInputDirection < 0f)
             {
-                Flip();
+                playerSpriteRenderer.flipX = true;
             }
         }
         

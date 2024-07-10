@@ -36,12 +36,14 @@ public class Bird : Animal
             if (transform.position.x - FlightPath[positionIndex].position.x > 0) 
             {
                 spriteRenderer.flipX = true;
-                playerSpriteRenderer.flipX = true;
+                Debug.Log("Player Sprite renderer flip: " + playerSpriteRenderer.flipX + "Bird Sprite renderer flip: " + spriteRenderer.flipX);
+                if (playerSpriteRenderer.flipX) { playerSpriteRenderer.flipX = spriteRenderer.flipX; }
             }
             else 
             {
                 spriteRenderer.flipX = false;
-                playerSpriteRenderer.flipX = false;
+                Debug.Log("Player Sprite renderer flip: " + playerSpriteRenderer.flipX + "Bird Sprite renderer flip: " + spriteRenderer.flipX);
+                if (!playerSpriteRenderer.flipX) { playerSpriteRenderer.flipX = spriteRenderer.flipX; }
             }
 
             while (Vector2.Distance(transform.position, FlightPath[positionIndex].position) > .01f)
