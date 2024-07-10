@@ -78,6 +78,7 @@ public class Bird : Animal
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+        player.GetComponent<PlayerController>().enabled = false;
 
         player.transform.position = playerSeatPos.position;
         player.transform.SetParent(transform);
@@ -89,5 +90,6 @@ public class Bird : Animal
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
         rb.gravityScale = 2f;
+        player.GetComponent<PlayerController>().enabled = true;
     }
 }
