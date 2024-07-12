@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -25.039402, y: 6.4112577, z: 0.04237915}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.11, y: 0.11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3617190606314543314}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,6 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healingPotions: {fileID: 0}
+  flowers:
+  - {fileID: 21300000, guid: e6d281b3b0f20a8418357ac3e511f3a4, type: 3}
+  - {fileID: 21300000, guid: 524bfdcc6f710304cbc03fd43a31081f, type: 3}
+  - {fileID: 21300000, guid: 28e2d242a59660b43a9d1dc2e0fd8619, type: 3}
+  - {fileID: 21300000, guid: 8fe794f6bad42bc48b105e7c00cc67f3, type: 3}
 --- !u!58 &1167056216110024193
 CircleCollider2D:
   m_ObjectHideFlags: 0

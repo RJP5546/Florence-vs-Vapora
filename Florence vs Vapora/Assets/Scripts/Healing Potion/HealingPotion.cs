@@ -9,6 +9,20 @@ using UnityEngine;
 public class HealingPotion : MonoBehaviour
 {
     [SerializeField] private InventoryIntVariableSO healingPotions;
+    [SerializeField] private Sprite[] flowers;
+
+    private SpriteRenderer spriteRender;
+
+    private void Start()
+    {
+        spriteRender = GetComponent<SpriteRenderer>();
+        spriteRender.sprite = ChooseFlower();
+    }
+
+    private Sprite ChooseFlower()
+    {
+        return flowers[Random.Range(0, flowers.Length + 1)];
+    }
 
     public void HealAnimal(Animal animal)
     {
