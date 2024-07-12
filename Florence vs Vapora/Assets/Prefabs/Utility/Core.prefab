@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1976943153545801453, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_Name
+      value: Pause Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 2811965753385097487, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -67,10 +71,38 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3078185344051771542, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: flowerCount
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f9c04f122f5ddd419e3e6c212fcb337, type: 2}
     - target: {fileID: 3385503726661780926, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2475559076750776085}
+      objectReference: {fileID: 696863691130107896}
+    - target: {fileID: 4263148026359819371, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_Name
+      value: Pause Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291127489775377790, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: hudCanvas
+      value: 
+      objectReference: {fileID: 6287936346689189093}
+    - target: {fileID: 4595485575424595515, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 811.2825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595485575424595515, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 91.0619
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595485575424595515, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -623.7056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595485575424595515, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 484.70557
+      objectReference: {fileID: 0}
     - target: {fileID: 4664053767830000233, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -151,6 +183,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487059590112388951, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487059590112388951, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487059590112388951, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746426058292919794, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 909
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746426058292919794, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 496.31
+      objectReference: {fileID: 0}
     - target: {fileID: 7306484186913300067, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
       propertyPath: m_Name
       value: Hud Canvas
@@ -160,9 +212,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
---- !u!114 &2475559076750776085 stripped
+--- !u!114 &696863691130107896 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1187850514875661715, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4291127489775377790, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
   m_PrefabInstance: {fileID: 3613826864047778438}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -171,6 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5888177ad8fd745358ace1e1ada84e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6287936346689189093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7306484186913300067, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
+  m_PrefabInstance: {fileID: 3613826864047778438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6538419852026352500 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7537836467279657458, guid: 2a79b5069c12abc48abf928a5e62ae1b, type: 3}
@@ -299,6 +356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1149228686476790910, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2399998
+      objectReference: {fileID: 0}
     - target: {fileID: 1225002619293266737, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
       propertyPath: healthBar
       value: 
@@ -309,11 +370,11 @@ PrefabInstance:
       objectReference: {fileID: 3470048538340949672}
     - target: {fileID: 3109336927887598570, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.94
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 3109336927887598570, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.35
+      value: 22.81
       objectReference: {fileID: 0}
     - target: {fileID: 3109336927887598570, guid: ecf2d76a2ce9e6943bc5075ea50a6aad, type: 3}
       propertyPath: m_LocalPosition.z

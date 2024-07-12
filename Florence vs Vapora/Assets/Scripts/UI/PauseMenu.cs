@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
- 
+    [SerializeField] GameObject hudCanvas;
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -15,7 +16,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
-        pauseMenu.SetActive(false);
+        hudCanvas.SetActive(false);
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
     }
