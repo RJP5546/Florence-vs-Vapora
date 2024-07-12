@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerCont
     {
         //call the interact with item method on the itemInteractor
         if (context.performed) { itemInteractor.InteractWithItem(); }
-        
+        animator.Play("PlayerKneel");
     }
 }
 
