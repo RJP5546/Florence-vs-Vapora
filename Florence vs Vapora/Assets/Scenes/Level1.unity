@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7425924386834966615, guid: c14fb3f5b4a08ce4383244d35c015ea1, type: 3}
+      propertyPath: LevelToLoad
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 7599204715626438264, guid: c14fb3f5b4a08ce4383244d35c015ea1, type: 3}
       propertyPath: m_Name
       value: Level Exit
@@ -648,6 +652,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elephant
       objectReference: {fileID: 0}
+    - target: {fileID: 1673396025420922687, guid: a801b6cd6945220449b35f7ad2b91e2e, type: 3}
+      propertyPath: WalkPath.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673396025420922687, guid: a801b6cd6945220449b35f7ad2b91e2e, type: 3}
+      propertyPath: WalkPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 65858140}
     - target: {fileID: 1673396025420922687, guid: a801b6cd6945220449b35f7ad2b91e2e, type: 3}
       propertyPath: FlightPath.Array.data[0]
       value: 
@@ -1653,11 +1665,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530936573398211790, guid: 22b9dc7a061631f4ba0e4aafe7bbb99e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.52
+      value: -29.18
       objectReference: {fileID: 0}
     - target: {fileID: 8530936573398211790, guid: 22b9dc7a061631f4ba0e4aafe7bbb99e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.81
+      value: -11.09
       objectReference: {fileID: 0}
     - target: {fileID: 9050419334879123316, guid: 22b9dc7a061631f4ba0e4aafe7bbb99e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2174,7 +2186,7 @@ Transform:
   m_GameObject: {fileID: 1536257779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.52, y: 25.05, z: -10}
+  m_LocalPosition: {x: -29.18, y: -8.85, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

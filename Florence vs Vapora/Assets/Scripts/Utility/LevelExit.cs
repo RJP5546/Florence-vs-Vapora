@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     [SerializeField] private GameManager gm;
+    [SerializeField] private string LevelToLoad;
     private bool canExit;
 
     private void Start()
@@ -15,7 +16,7 @@ public class LevelExit : MonoBehaviour
     {
         if (col.gameObject.tag == "Player" && canExit)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(LevelToLoad);
         }
     }
 
