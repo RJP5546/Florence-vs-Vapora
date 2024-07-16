@@ -6,8 +6,9 @@ public class BackgroundManager : MonoBehaviour
 {
     private GameManager gm;
 
+    [SerializeField] private GameObject[] BackgroundSpawnLocations;
     [SerializeField] private GameObject[] Backgrounds;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +16,15 @@ public class BackgroundManager : MonoBehaviour
         switch (gm.GasLeaksPatched)
         {
             case <= 2:
-                Instantiate(Backgrounds[0], this.transform);
+                Instantiate(Backgrounds[0], BackgroundSpawnLocations[0].transform);
                 break;
 
-            case <= 4 and > 2:
-                Instantiate(Backgrounds[0], this.transform);
+            case > 2 and <= 4:
+                Instantiate(Backgrounds[0], BackgroundSpawnLocations[1].transform);
                 break;
 
-            case <= 6 and > 4:
-                Instantiate(Backgrounds[0], this.transform);
+            case > 4 and <= 6:
+                Instantiate(Backgrounds[0], BackgroundSpawnLocations[2].transform);
                 break;
         }
     }

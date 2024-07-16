@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSpawnPoint : MonoBehaviour
 {
-    private GameObject player;
+    [SerializeField] private GameObject player;
     void Start()
     {
         //at the start of the scene, it finds the player and sets its spawn to this spawn point
