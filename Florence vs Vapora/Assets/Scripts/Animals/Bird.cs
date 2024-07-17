@@ -10,6 +10,13 @@ public class Bird : Animal
     [SerializeField] private Transform playerSeatPos;
     [SerializeField] private SpriteRenderer playerSpriteRenderer;
 
+    private Transform parent;
+
+    private void Awake()
+    {
+        parent = transform.parent;
+    }
+
     public void RunInteraction()
     {
         if (isHealed)
@@ -73,6 +80,7 @@ public class Bird : Animal
         }
         AnimalAnimator.SetBool("IsFlying", false);
 
+
     }
 
     private void LockPlayerOn()
@@ -88,7 +96,7 @@ public class Bird : Animal
 
     private void LockPlayerOff()
     {
-        player.transform.parent = null;
+        player.transform.parent = parent;
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
         rb.gravityScale = 2f;
