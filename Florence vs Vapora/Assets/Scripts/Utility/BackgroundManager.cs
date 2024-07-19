@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundManager : MonoBehaviour
 {
-    private GameManager gm;
+    [SerializeField] private GameManager gm;
 
     [SerializeField] private GameObject[] BackgroundSpawnLocations;
     [SerializeField] private GameObject[] Backgrounds;
@@ -13,6 +13,7 @@ public class BackgroundManager : MonoBehaviour
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
+        
         switch (gm.GasLeaksPatched)
         {
             case <= 2:
@@ -20,13 +21,17 @@ public class BackgroundManager : MonoBehaviour
                 break;
 
             case > 2 and <= 4:
-                Instantiate(Backgrounds[0], BackgroundSpawnLocations[1].transform);
+                Instantiate(Backgrounds[1], BackgroundSpawnLocations[1].transform);
                 break;
 
             case > 4 and <= 6:
-                Instantiate(Backgrounds[0], BackgroundSpawnLocations[2].transform);
+                Instantiate(Backgrounds[1], BackgroundSpawnLocations[2].transform);
                 break;
         }
     }
 
+    private void Update()
+    {
+        Debug.Log(gm.GasLeaksPatched);
+    }
 }

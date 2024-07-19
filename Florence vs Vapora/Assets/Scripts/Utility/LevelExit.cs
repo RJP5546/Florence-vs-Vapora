@@ -26,8 +26,8 @@ public class LevelExit : MonoBehaviour
         {
             canExit = true;
             this.GetComponent<SpriteRenderer>().color = Color.green;
-            gm.GasLeaksPatched += 1;
-        }  
+        }
+        gm.GasLeaksPatched += 1;
     }
 
 }
