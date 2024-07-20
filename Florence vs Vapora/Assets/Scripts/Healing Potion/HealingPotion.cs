@@ -30,6 +30,7 @@ public class HealingPotion : MonoBehaviour
         {
             animal.Heal();
             Debug.Log("healed");
+            healingPotions.value -= 1;
         }
         else
         {
