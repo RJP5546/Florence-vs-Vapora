@@ -8,6 +8,7 @@ public class SlidingDoor : MonoBehaviour
 {
     private Vector2 startingPos;
     [SerializeField] private Transform DoorOpenPos;
+    [SerializeField] private float speed = 3f;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class SlidingDoor : MonoBehaviour
     {
         while (Vector2.Distance(transform.position, DoorOpenPos.position) > .01f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, DoorOpenPos.position, 2 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, DoorOpenPos.position, speed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
         
@@ -26,7 +27,7 @@ public class SlidingDoor : MonoBehaviour
     {
         while (Vector2.Distance(transform.position, startingPos) > .01f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, startingPos, 2 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
     }
