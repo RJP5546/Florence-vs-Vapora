@@ -31,8 +31,6 @@ public class Boar : Animal
         {
             potion.HealAnimal(this);
             //Enable boar box Collider
-            BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-            boxCollider.enabled = true;
         }
     }
 
@@ -51,6 +49,8 @@ public class Boar : Animal
 
     IEnumerator Charge(Vector2 cD)
     {
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider.enabled = true;
         if (cD.x < 0) { this.spriteRenderer.flipX = true; }
         else { this.spriteRenderer.flipX = false; }
         while (hasHitWall == false)

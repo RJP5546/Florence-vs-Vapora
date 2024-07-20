@@ -1058,6 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e143d73bcfa6644ead060e3c18cadab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
   BackgroundSpawnLocations:
   - {fileID: 460738394}
   - {fileID: 1340307100}
@@ -1485,7 +1486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 605345920991867585, guid: 5de625c71bb865444b9c62ecd205bfcf, type: 3}
       propertyPath: moveDir.y
-      value: -1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 605345920991867585, guid: 5de625c71bb865444b9c62ecd205bfcf, type: 3}
       propertyPath: startTime
@@ -1964,7 +1965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 605345920991867585, guid: 5de625c71bb865444b9c62ecd205bfcf, type: 3}
       propertyPath: moveDir.y
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 605345920991867585, guid: 5de625c71bb865444b9c62ecd205bfcf, type: 3}
       propertyPath: startTime
@@ -2906,6 +2907,10 @@ PrefabInstance:
     - target: {fileID: 7125255944235700021, guid: 4f4c003aa5a035340a7b9133c7d21f9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901782115562425322, guid: 4f4c003aa5a035340a7b9133c7d21f9e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
