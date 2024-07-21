@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7948086277758258156}
   - component: {fileID: 5497362441652834496}
   - component: {fileID: 3760900468990260493}
-  - component: {fileID: 8169816286772680412}
   - component: {fileID: 4007076720359126477}
   m_Layer: 0
   m_Name: Player
@@ -225,7 +224,7 @@ MonoBehaviour:
   walkLerpTime: 0.05
   stopLerpTime: 0.5
   jumpingPower: 16
-  isFacingRight: 1
+  playerSpriteRenderer: {fileID: 0}
   playerSpawnLocation: {fileID: 0}
 --- !u!114 &5497362441652834496
 MonoBehaviour:
@@ -282,19 +281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPotion: {fileID: 11400000, guid: 5f9c04f122f5ddd419e3e6c212fcb337, type: 2}
---- !u!114 &8169816286772680412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857475472769616850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c15892fce48b54fa4eca97f32e62b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healingPotions: {fileID: 11400000, guid: 5f9c04f122f5ddd419e3e6c212fcb337, type: 2}
 --- !u!95 &4007076720359126477
 Animator:
   serializedVersion: 5

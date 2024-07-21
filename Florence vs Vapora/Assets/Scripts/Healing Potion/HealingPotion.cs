@@ -21,7 +21,7 @@ public class HealingPotion : MonoBehaviour
 
     private Sprite ChooseFlower()
     {
-        return flowers[Random.Range(0, flowers.Length + 1)];
+        return flowers[Random.Range(0, flowers.Length - 1)];
     }
 
     public void HealAnimal(Animal animal)
