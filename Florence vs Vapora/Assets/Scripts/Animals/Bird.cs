@@ -12,11 +12,6 @@ public class Bird : Animal
 
     private Transform parent;
 
-    private void Awake()
-    {
-        parent = transform.parent;
-    }
-
     public void RunInteraction()
     {
         if (isHealed)
@@ -85,6 +80,7 @@ public class Bird : Animal
 
     private void LockPlayerOn()
     {
+        parent = player.transform.parent;
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;

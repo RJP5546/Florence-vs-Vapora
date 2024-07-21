@@ -399,6 +399,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1075776194}
     m_Modifications:
+    - target: {fileID: 186541352533093043, guid: 66ec8ee7643f7e449aed2e53042a87d7, type: 3}
+      propertyPath: FlightPath.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 186541352533093043, guid: 66ec8ee7643f7e449aed2e53042a87d7, type: 3}
+      propertyPath: FlightPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 1211062404}
+    - target: {fileID: 186541352533093043, guid: 66ec8ee7643f7e449aed2e53042a87d7, type: 3}
+      propertyPath: FlightPath.Array.data[1]
+      value: 
+      objectReference: {fileID: 1015968123}
+    - target: {fileID: 186541352533093043, guid: 66ec8ee7643f7e449aed2e53042a87d7, type: 3}
+      propertyPath: FlightPath.Array.data[2]
+      value: 
+      objectReference: {fileID: 525100358}
+    - target: {fileID: 186541352533093043, guid: 66ec8ee7643f7e449aed2e53042a87d7, type: 3}
+      propertyPath: FlightPath.Array.data[3]
+      value: 
+      objectReference: {fileID: 937108010}
     - target: {fileID: 1162914091252698864, guid: 66ec8ee7643f7e449aed2e53042a87d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.97
@@ -2384,6 +2404,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1075776194}
     m_Modifications:
+    - target: {fileID: -6452209083653227451, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
+      propertyPath: WalkPath.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6452209083653227451, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
+      propertyPath: WalkPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 366698886}
+    - target: {fileID: -6452209083653227451, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
+      propertyPath: WalkPath.Array.data[1]
+      value: 
+      objectReference: {fileID: 1519504909}
+    - target: {fileID: -6452209083653227451, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
+      propertyPath: WalkPath.Array.data[2]
+      value: 
+      objectReference: {fileID: 638316998}
     - target: {fileID: 448109252854361661, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
       propertyPath: m_Name
       value: Alligator

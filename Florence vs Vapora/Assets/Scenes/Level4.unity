@@ -1081,6 +1081,10 @@ PrefabInstance:
       propertyPath: WalkPath.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6452209083653227451, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
+      propertyPath: WalkPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 1386691177}
     - target: {fileID: 448109252854361661, guid: 23425f7ea20fa014d9eb9c98dcc72953, type: 3}
       propertyPath: m_Name
       value: Alligator

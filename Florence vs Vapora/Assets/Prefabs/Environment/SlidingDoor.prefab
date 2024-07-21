@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7822063727148315764}
   - component: {fileID: 8062177057107940428}
   - component: {fileID: 8455603694223874825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorOpenPos: {fileID: 7641961116350891262}
+  speed: 3
 --- !u!1 &6346112312068756699
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3937355714357129803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SlidingDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7641961116350891262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OpenPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
